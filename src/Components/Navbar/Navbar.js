@@ -97,7 +97,10 @@ function Navbar() {
             onClick={() => {
                var imageElement =
                   document.getElementsByClassName("contactForm1");
-               imageElement[0].scrollIntoView({ behavior: "smooth" });
+               // fixed return null error
+               if (imageElement.length > 0) {
+                  imageElement[0].scrollIntoView({ behavior: "smooth" });
+                }
             }}
          >
             {" "}
